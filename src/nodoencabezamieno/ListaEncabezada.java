@@ -74,6 +74,29 @@ public class ListaEncabezada {
         }
         
         
+        
+    }
+    
+    public void crearListacondivi(int div){
+        ListaEncabezada lista2 = new ListaEncabezada();
+        Nodo aux;
+        aux = encabezado;
+        String dato = "";
+        
+        if(aux.getLigaSiguiente() != null){
+            while(aux != null){
+                if(((aux.getDato() % div) == 0 )&& aux != encabezado){
+                    lista2.agregarNodo(aux.getDato());
+                }
+            aux = aux.getLigaSiguiente();
+            }
+            lista2.mostrarLista();
+        }else{
+            JOptionPane.showMessageDialog(null,"No tiene elementos la lista");
+        
+        }
+            
+
     }
     
     
